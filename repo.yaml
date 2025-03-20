@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: public-scratchtest
+
+---
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: public-scratchtest
+  namespace: public-scratchtest
+spec:
+  url: "https://github.com/chmoutest/public"
+  # concurrency_limit: 10
